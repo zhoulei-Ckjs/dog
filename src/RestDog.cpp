@@ -8,14 +8,12 @@ void RestDog::PostMethod(web::http::http_request request)
     if (path == "/start")
     {
         dog_log << TIMEDOG << "[start]\n";
-        dog_log.flush();
 //        handle_start(request);
         request.reply(web::http::status_codes::OK, "start");
     }
     else if (path == "/stop")
     {
         dog_log << TIMEDOG << "[stop]\n";
-        dog_log.flush();
 //        handle_stop(request);
         request.reply(web::http::status_codes::OK, "stop");
     }
